@@ -1,0 +1,7 @@
+<resources>
+<color name="primary">#6200EE</color>
+<color name="secondary">#03DAC5</color>
+<color name="background">#FFFFFF</color>
+<color name="textPrimary">#000000</color>
+<color name="textSecondary">#666666</color>
+</resources>

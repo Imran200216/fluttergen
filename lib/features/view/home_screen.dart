@@ -1,7 +1,10 @@
-import 'package:assetgen/core/app_assets/gen/assets.gen.dart';
-import 'package:assetgen/core/app_assets/gen/fonts.gen.dart';
+import 'package:assetgen/gen/assets.gen.dart';
+import 'package:assetgen/gen/colors.gen.dart';
+import 'package:assetgen/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:lottie/lottie.dart';
+import 'package:rive/rive.dart' as rive;
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -10,47 +13,95 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Center(
-          child: Column(
-            spacing: 10,
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              /// font family from flutter gen
-              Text(
-                "HI Flutter",
-                style: TextStyle(
-                  fontFamily: FontFamily.redhat,
-                  fontSize: 20,
-                  color: Colors.black,
-                  fontWeight: FontWeight.w800,
+        body: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const SizedBox(height: 20),
+
+                /// ✅ **Font from FlutterGen**
+                Text(
+                  "Hi, Flutter!",
+                  style: TextStyle(
+                    fontFamily: FontFamily.redhat,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.black,
+                  ),
                 ),
-              ),
 
-              /// svg assets from flutter gen
-              SvgPicture.asset(
-                Assets.svg.heartBroken,
-                height: 100,
-                width: 100,
-                fit: BoxFit.cover,
-              ),
+                const SizedBox(height: 20),
 
-              /// Jpg assets from flutter gen
-              Image.asset(
-                Assets.jpg.html.path,
-                height: 200,
-                width: 200,
-                fit: BoxFit.cover,
-              ),
+                /// ✅ **SVG Asset from FlutterGen**
+                SvgPicture.asset(
+                  Assets.svg.heartBroken,
+                  height: 100,
+                  width: 100,
+                  fit: BoxFit.cover,
+                ),
 
-              /// png assets from flutter gen
-              Image.asset(
-                Assets.png.fastag.path,
-                height: 200,
-                width: 200,
-                fit: BoxFit.cover,
-              ),
-            ],
+                const SizedBox(height: 20),
+
+                /// ✅ **JPG Asset from FlutterGen**
+                Image.asset(
+                  Assets.jpg.html.path,
+                  height: 200,
+                  width: 200,
+                  fit: BoxFit.cover,
+                ),
+
+                const SizedBox(height: 20),
+
+                /// ✅ **PNG Asset from FlutterGen**
+                Image.asset(
+                  Assets.png.fastag.path,
+                  height: 200,
+                  width: 200,
+                  fit: BoxFit.cover,
+                ),
+
+                const SizedBox(height: 20),
+
+                /// ✅ **Lottie Animation from FlutterGen**
+                Lottie.asset(
+                  Assets.lottie.robotAnimation.path,
+                  height: 200,
+                  width: 200,
+                  fit: BoxFit.cover,
+                ),
+
+                const SizedBox(height: 20),
+
+                /// ✅ **Color Asset from FlutterGen**
+                Container(
+                  padding: const EdgeInsets.all(10),
+                  color: ColorName.primary,
+                  child: Text(
+                    'Hello, FlutterGen!',
+                    style: TextStyle(
+                      color: ColorName.textPrimary,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+
+                /// ✅ **Rive Animation from FlutterGen**
+                SizedBox(
+                  height: 200,
+                  width: 200,
+                  child: rive.RiveAnimation.asset(
+                    Assets.rive.monster.path,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+
+                const SizedBox(height: 20),
+              ],
+            ),
           ),
         ),
       ),
