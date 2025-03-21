@@ -106,7 +106,7 @@ flutter:
   # see https://flutter.dev/to/font-from-package
 
 flutter_gen:
-  output: lib/gen/
+  output: lib/core/util/gen/
   integrations:
     lottie: true
     rive: true

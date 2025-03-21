@@ -1,6 +1,6 @@
-import 'package:assetgen/gen/assets.gen.dart';
-import 'package:assetgen/gen/colors.gen.dart';
-import 'package:assetgen/gen/fonts.gen.dart';
+import 'package:assetgen/core/util/gen/assets.gen.dart';
+import 'package:assetgen/core/util/gen/colors.gen.dart';
+import 'package:assetgen/core/util/gen/fonts.gen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:lottie/lottie.dart';
