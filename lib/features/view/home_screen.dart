@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
         body: SingleChildScrollView(
           child: Center(
             child: Column(
+              spacing: 20,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 20),
@@ -31,8 +32,6 @@ class HomeScreen extends StatelessWidget {
                   ),
                 ),
 
-                const SizedBox(height: 20),
-
                 /// ✅ **SVG Asset from FlutterGen**
                 SvgPicture.asset(
                   Assets.svg.heartBroken,
@@ -40,8 +39,6 @@ class HomeScreen extends StatelessWidget {
                   width: 100,
                   fit: BoxFit.cover,
                 ),
-
-                const SizedBox(height: 20),
 
                 /// ✅ **JPG Asset from FlutterGen**
                 Image.asset(
@@ -51,8 +48,6 @@ class HomeScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
 
-                const SizedBox(height: 20),
-
                 /// ✅ **PNG Asset from FlutterGen**
                 Image.asset(
                   Assets.png.fastag.path,
@@ -61,8 +56,6 @@ class HomeScreen extends StatelessWidget {
                   fit: BoxFit.cover,
                 ),
 
-                const SizedBox(height: 20),
-
                 /// ✅ **Lottie Animation from FlutterGen**
                 Lottie.asset(
                   Assets.lottie.robotAnimation.path,
@@ -70,8 +63,6 @@ class HomeScreen extends StatelessWidget {
                   width: 200,
                   fit: BoxFit.cover,
                 ),
-
-                const SizedBox(height: 20),
 
                 /// ✅ **Color Asset from FlutterGen**
                 Container(
@@ -86,8 +77,6 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-
-                const SizedBox(height: 20),
 
                 /// ✅ **Rive Animation from FlutterGen**
                 SizedBox(
